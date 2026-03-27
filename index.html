@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Елизавета Махонина — руководитель PR-отдела, пресс-служба, стратегические коммуникации. Москва.">
+    <title>Елизавета Махонина — PR-руководитель · Стратегические коммуникации</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Кастомный курсор -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Навигация -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">ЕМ<span class="nav-logo-dot">.</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#competencies" class="nav-link">Компетенции</a>
+                <a href="#experience" class="nav-link">Карьера</a>
+                <a href="#cases" class="nav-link">Кейсы</a>
+                <a href="#education" class="nav-link">Образование</a>
+                <a href="#contact" class="nav-link nav-link-cta">Написать</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/hero-bg.png" alt="" class="hero-bg-img" aria-hidden="true">
+            <div class="hero-bg-overlay"></div>
+        </div>
+        <!-- Плавающие частицы -->
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge anim-in">
+                    <span class="hero-badge-dot"></span>
+                    Стратегические коммуникации и PR
+                </div>
+                <h1 class="hero-name anim-in">
+                    Елизавета<br><em>Махонина</em>
+                </h1>
+                <p class="hero-role anim-in">Руководитель PR-отдела · Глава пресс-службы</p>
+                <p class="hero-desc anim-in">Управляю информационным полем, строю медиасети, превращаю PR в&nbsp;рабочий инструмент влияния. Государственные и&nbsp;спортивные проекты. Москва.</p>
+                <div class="hero-actions anim-in">
+                    <a href="#contact" class="btn btn-gold magnetic">Написать</a>
+                    <a href="#cases" class="btn btn-ghost magnetic">Смотреть кейсы</a>
+                </div>
+                <div class="hero-markers anim-in">
+                    <div class="hero-marker"><strong>5+</strong><span>лет в PR</span></div>
+                    <div class="hero-marker-sep"></div>
+                    <div class="hero-marker"><strong>10+</strong><span>человек в команде</span></div>
+                    <div class="hero-marker-sep"></div>
+                    <div class="hero-marker"><strong>5 млн+</strong><span>медиаохват</span></div>
+                </div>
+            </div>
+            <div class="hero-photo anim-in">
+                <div class="hero-photo-ring"></div>
+                <div class="hero-photo-frame">
+                    <img src="фото 5.jpg" alt="Елизавета Махонина" loading="eager">
+                </div>
+                <div class="hero-photo-caption">
+                    <span>Москва</span>
+                    <span>·</span>
+                    <span>МГИМО</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ОБО МНЕ
+         ═══════════════════════════════════════════ -->
+    <section class="section section-cream" id="about">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-left anim-scroll">
+                    <span class="label-top">Профиль</span>
+                    <h2 class="heading-xl">Коротко<br>обо мне</h2>
+                </div>
+                <div class="about-right anim-scroll">
+                    <p class="text-lead">Я&nbsp;строю коммуникации с&nbsp;нуля — от&nbsp;стратегии до&nbsp;команды и&nbsp;первой публикации в&nbsp;федеральном СМИ.</p>
+                    <p class="text-body">Начинала как журналист: «Российская газета», «Известия», «Пятый канал», пресс-служба Русского музея. Знаю медиакухню изнутри — что нужно редактору, как попасть в&nbsp;повестку, как выстроить долгосрочные отношения с&nbsp;редакцией.</p>
+                    <p class="text-body">Сейчас руковожу PR в&nbsp;Федерации настольного тенниса России и&nbsp;одновременно веду пресс-службу Ассоциации анимационного кино. Работаю с&nbsp;первыми лицами — от&nbsp;Правительства Москвы до&nbsp;руководителей спортивных федераций.</p>
+                </div>
+            </div>
+            <div class="stats-ribbon anim-scroll">
+                <div class="stat-item"><span class="stat-val counter" data-target="5">0</span><span class="stat-plus">+</span><span class="stat-lbl">лет в PR и медиа</span></div>
+                <div class="stat-item"><span class="stat-val counter" data-target="10">0</span><span class="stat-plus">+</span><span class="stat-lbl">человек в команде</span></div>
+                <div class="stat-item"><span class="stat-val counter" data-target="400">0</span><span class="stat-plus">+</span><span class="stat-lbl">публикаций в проектах</span></div>
+                <div class="stat-item"><span class="stat-val">5 млн</span><span class="stat-plus">+</span><span class="stat-lbl">суммарный медиаохват</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         КОМПЕТЕНЦИИ
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="competencies">
+        <div class="container">
+            <div class="section-head anim-scroll">
+                <span class="label-top">Экспертиза</span>
+                <h2 class="heading-xl">Что я умею</h2>
+            </div>
+            <div class="comp-grid">
+                <div class="comp-card anim-scroll">
+                    <div class="comp-num">01</div>
+                    <h3>Коммуникационная стратегия</h3>
+                    <p>Разрабатываю PR-стратегии для госструктур, спортивных федераций и культурных организаций. Умею превратить набор задач в систему, которая работает без ручного управления каждым шагом.</p>
+                </div>
+                <div class="comp-card anim-scroll">
+                    <div class="comp-num">02</div>
+                    <h3>Управление командой</h3>
+                    <p>Собираю и веду PR-отделы: копирайтеры, дизайнеры, SMM-специалисты, видеографы. Ставлю задачи, контролирую результат. Умею работать с подрядчиками и агентствами.</p>
+                </div>
+                <div class="comp-card anim-scroll">
+                    <div class="comp-num">03</div>
+                    <h3>Работа со СМИ</h3>
+                    <p>Собственная база контактов в федеральных и отраслевых медиа. Строю медиапартнёрства, управляю аккредитациями, организую пресс-мероприятия. Знаю, как попасть в повестку.</p>
+                </div>
+                <div class="comp-card anim-scroll">
+                    <div class="comp-num">04</div>
+                    <h3>Личный бренд руководителя</h3>
+                    <p>Развиваю публичный образ первых лиц — от колонок и интервью до стратегии присутствия в медиа. Работала с руководителями Правительства Москвы и спортивных федераций.</p>
+                </div>
+                <div class="comp-card anim-scroll">
+                    <div class="comp-num">05</div>
+                    <h3>PR-кампании и события</h3>
+                    <p>Полный цикл: от идеи и пресс-пакета до аккредитаций, управления инфополем в день мероприятия и отчёта по охватам. Суперкубок, фестивали, городские события.</p>
+                </div>
+                <div class="comp-card anim-scroll">
+                    <div class="comp-num">06</div>
+                    <h3>Работа с госструктурами</h3>
+                    <p>Опыт взаимодействия с органами власти, Дептрансом, Минспортом, Правительством МО. Понимаю формат B2G-коммуникаций и умею в нём работать.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         КАРЬЕРА
+         ═══════════════════════════════════════════ -->
+    <section class="section section-cream" id="experience">
+        <div class="container">
+            <div class="section-head anim-scroll">
+                <span class="label-top">Карьера</span>
+                <h2 class="heading-xl">Профессиональный путь</h2>
+            </div>
+            
+            <div class="exp-timeline">
+                <!-- ФНТР -->
+                <div class="exp-card exp-current anim-scroll">
+                    <div class="exp-side">
+                        <span class="exp-badge">Сейчас</span>
+                        <span class="exp-dates">Ноябрь 2025 — н.в.</span>
+                    </div>
+                    <div class="exp-main">
+                        <h3 class="exp-role">Руководитель PR-отдела</h3>
+                        <div class="exp-company">Федерация настольного тенниса России</div>
+                        <ul class="exp-list">
+                            <li>Собрала и веду PR-команду из 10+ человек: копирайтеры, SMM, дизайнеры</li>
+                            <li>Заключаю долгосрочные медиапартнёрства с федеральными и спортивными СМИ</li>
+                            <li>Развиваю личный бренд руководителя Федерации</li>
+                            <li>Выстроила коммуникационную стратегию и позиционирование бренда ФНТР</li>
+                            <li>Организую PR-сопровождение турниров — от Суперкубка до Серии ФНТР</li>
+                            <li>Координирую подрядчиков: агентства, площадки, внешних специалистов</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ААК -->
+                <div class="exp-card exp-current anim-scroll">
+                    <div class="exp-side">
+                        <span class="exp-badge">Сейчас</span>
+                        <span class="exp-dates">Июнь 2025 — н.в.</span>
+                    </div>
+                    <div class="exp-main">
+                        <h3 class="exp-role">Руководитель пресс-службы</h3>
+                        <div class="exp-company">Ассоциация анимационного кино</div>
+                        <ul class="exp-list">
+                            <li>Формирую медиаповестку и стратегию продвижения — фестиваль «Аниматика», отраслевые события</li>
+                            <li>Готовлю руководителя к интервью, комментариям для СМИ</li>
+                            <li>Пишу пресс-релизы, новостные материалы, веду базу журналистов</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Правительство Москвы -->
+                <div class="exp-card anim-scroll">
+                    <div class="exp-side">
+                        <span class="exp-dates">Янв — Апр 2025</span>
+                    </div>
+                    <div class="exp-main">
+                        <h3 class="exp-role">Главный специалист · Управление проектов продвижения</h3>
+                        <div class="exp-company">Правительство Москвы</div>
+                        <ul class="exp-list">
+                            <li>Готовила медиапроекты для ресурсов руководства, включая канал мэра Москвы</li>
+                            <li>Вела пиар-план руководителя: колонки, тезисы, публичные выступления</li>
+                            <li>Мониторила инфополе, создавала контент под разные форматы</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Парк Фили -->
+                <div class="exp-card anim-scroll">
+                    <div class="exp-side">
+                        <span class="exp-dates">Апр — Июн 2025</span>
+                    </div>
+                    <div class="exp-main">
+                        <h3 class="exp-role">Менеджер отдела продвижения</h3>
+                        <div class="exp-company">ПКиО «Фили»</div>
+                        <ul class="exp-list">
+                            <li>PR-кампании, спонсорские предложения, организация городских мероприятий</li>
+                            <li>Интеграция маскота «Речкин» (Дептранс Москвы) в коммуникации парка</li>
+                            <li>Разработка брендбука, работа со СМИ, согласование съёмок</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NEWS.ru -->
+                <div class="exp-card anim-scroll">
+                    <div class="exp-side">
+                        <span class="exp-dates">Июн 2024 — Фев 2025</span>
+                    </div>
+                    <div class="exp-main">
+                        <h3 class="exp-role">Обозреватель</h3>
+                        <div class="exp-company">NEWS.ru</div>
+                        <ul class="exp-list">
+                            <li>Авторские статьи, командные материалы, выполнение KPI по охватам</li>
+                            <li>Интервью с публичными личностями, работа на мероприятиях</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Медиа-опыт -->
+                <div class="exp-card anim-scroll">
+                    <div class="exp-side">
+                        <span class="exp-dates">2017 — 2024</span>
+                    </div>
+                    <div class="exp-main">
+                        <h3 class="exp-role">Журналист · Медиа-база</h3>
+                        <div class="exp-company">«Российская газета» · «Известия» · «Пятый канал» · «Москва FM» · Русский музей · «Станок» · «Молодой коммунар»</div>
+                        <p class="exp-summary">Здесь всё началось. Авторские публикации в федеральных СМИ, прямые эфиры, пресс-служба Русского музея, собственный медиапроект «Станок» с нуля. Это фундамент: я знаю, как работают редакции, потому что сама была по ту сторону.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         КЕЙСЫ
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="cases">
+        <div class="container">
+            <div class="section-head anim-scroll">
+                <span class="label-top">Портфолио</span>
+                <h2 class="heading-xl">Избранные кейсы</h2>
+                <p class="text-body" style="max-width:640px">Каждый проект — своя история. Нажмите на&nbsp;карточку, чтобы прочитать подробности и&nbsp;увидеть результаты.</p>
+            </div>
+
+            <div class="cases-mosaic">
+                <!-- Суперкубок -->
+                <a href="cases/supercup.html" class="case-tile case-tile-wide anim-scroll" id="case-supercup">
+                    <div class="case-tile-img">
+                        <img src="assets/case-sport.png" alt="Суперкубок России 2025" loading="lazy">
+                    </div>
+                    <div class="case-tile-body">
+                        <span class="case-tile-tag">Главный проект · 2025</span>
+                        <h3>Суперкубок России 2025</h3>
+                        <p>Полный цикл PR-сопровождения крупнейшего турнира ФНТР. Лужники, декабрь, 356&nbsp;публикаций.</p>
+                        <span class="case-tile-cta">Подробнее →</span>
+                    </div>
+                </a>
+
+                <!-- Дайджест МЕГА -->
+                <a href="cases/digest-mega.html" class="case-tile anim-scroll" id="case-mega">
+                    <div class="case-tile-img">
+                        <img src="assets/case-media.png" alt="Дайджест МЕГА" loading="lazy">
+                    </div>
+                    <div class="case-tile-body">
+                        <span class="case-tile-tag">Без бюджета</span>
+                        <h3>Дайджест МЕГА</h3>
+                        <p>72 публикации и&nbsp;2,7 млн охват — без единого рубля рекламного бюджета.</p>
+                        <span class="case-tile-cta">Подробнее →</span>
+                    </div>
+                </a>
+
+                <!-- Аниматика -->
+                <a href="cases/animatika.html" class="case-tile anim-scroll" id="case-animatika">
+                    <div class="case-tile-img">
+                        <img src="аниматика.jpg" alt="Фестиваль Аниматика" loading="lazy">
+                    </div>
+                    <div class="case-tile-body">
+                        <span class="case-tile-tag">Рост +59%</span>
+                        <h3>Фестиваль «Аниматика»</h3>
+                        <p>Международный фестиваль детской анимации в&nbsp;«Артеке». С&nbsp;206 до&nbsp;328 публикаций за&nbsp;год.</p>
+                        <span class="case-tile-cta">Подробнее →</span>
+                    </div>
+                </a>
+
+                <!-- Речкин -->
+                <a href="cases/rechkin.html" class="case-tile case-tile-wide anim-scroll" id="case-rechkin">
+                    <div class="case-tile-img case-tile-img-contain">
+                        <img src="речкин2.jpg" alt="Речкин — маскот Московского транспорта" loading="lazy">
+                    </div>
+                    <div class="case-tile-body">
+                        <span class="case-tile-tag">Маскот · Дептранс</span>
+                        <h3>Речкин и&nbsp;парк «Фили»</h3>
+                        <p>Как детский персонаж Московского транспорта стал частью коммуникаций городского парка — и&nbsp;попал в&nbsp;Telegram-канал Дептранса.</p>
+                        <span class="case-tile-cta">Подробнее →</span>
+                    </div>
+                </a>
+
+                <!-- РосБиоТех -->
+                <a href="cases/rosbiotech.html" class="case-tile anim-scroll" id="case-rosbiotech">
+                    <div class="case-tile-img case-tile-img-contain">
+                        <img src="росбиотех.jpg" alt="РОСБИОТЕХ — 95 лет" loading="lazy">
+                    </div>
+                    <div class="case-tile-body">
+                        <span class="case-tile-tag">Юбилей</span>
+                        <h3>РОСБИОТЕХ · 95 лет</h3>
+                        <p>Корпоративная книга к&nbsp;юбилею университета: интервью, история, институциональный образ.</p>
+                        <span class="case-tile-cta">Подробнее →</span>
+                    </div>
+                </a>
+
+                <!-- Работа с первыми лицами -->
+                <a href="cases/government.html" class="case-tile anim-scroll" id="case-govt">
+                    <div class="case-tile-img">
+                        <img src="assets/case-govt.png" alt="Работа с первыми лицами" loading="lazy">
+                    </div>
+                    <div class="case-tile-body">
+                        <span class="case-tile-tag">Госсектор</span>
+                        <h3>Работа с&nbsp;первыми лицами</h3>
+                        <p>Личный бренд руководителей — от канала мэра Москвы до&nbsp;Президента ФНТР.</p>
+                        <span class="case-tile-cta">Подробнее →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ИНСТРУМЕНТЫ
+         ═══════════════════════════════════════════ -->
+    <section class="section section-cream" id="toolkit">
+        <div class="container">
+            <div class="section-head anim-scroll">
+                <span class="label-top">Инструменты</span>
+                <h2 class="heading-xl">Набор PR-руководителя</h2>
+            </div>
+            <div class="toolkit-cloud anim-scroll">
+                <span>Коммуникационная стратегия</span>
+                <span>Работа со стейкхолдерами</span>
+                <span>Медиапланирование</span>
+                <span>Кризисные коммуникации</span>
+                <span>Управление репутацией</span>
+                <span>Управление командой</span>
+                <span>Продвижение в соцсетях</span>
+                <span>Копирайтинг и контент</span>
+                <span>Организация мероприятий</span>
+                <span>Figma</span>
+                <span>Работа с госструктурами</span>
+                <span>Управление бюджетом</span>
+                <span>Работа со СМИ</span>
+                <span>Личный бренд руководителя</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ОБРАЗОВАНИЕ
+         ═══════════════════════════════════════════ -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="edu-layout">
+                <div class="edu-photo anim-scroll">
+                    <img src="фото 6.jpg" alt="Елизавета Махонина — Магистр МГИМО" loading="lazy">
+                </div>
+                <div class="edu-content">
+                    <span class="label-top anim-scroll">Образование</span>
+                    <h2 class="heading-xl anim-scroll">МГИМО:<br>журналистика</h2>
+
+                    <div class="edu-card anim-scroll">
+                        <div class="edu-year">2025</div>
+                        <div>
+                            <div class="edu-deg">Магистр</div>
+                            <h3>МГИМО МИД России</h3>
+                            <p>Международная журналистика</p>
+                        </div>
+                    </div>
+                    <div class="edu-card anim-scroll">
+                        <div class="edu-year">2023</div>
+                        <div>
+                            <div class="edu-deg">Бакалавр</div>
+                            <h3>МГИМО МИД России</h3>
+                            <p>Факультет международной журналистики</p>
+                        </div>
+                    </div>
+
+                    <div class="lang-block anim-scroll">
+                        <h3 class="lang-heading">Языки</h3>
+                        <div class="lang-row">
+                            <span class="lang-name">Русский</span>
+                            <span class="lang-lvl">Родной</span>
+                        </div>
+                        <div class="lang-row">
+                            <span class="lang-name">Английский</span>
+                            <span class="lang-lvl">C1 — Продвинутый</span>
+                            <div class="lang-bar"><div class="lang-fill" data-w="85%"></div></div>
+                        </div>
+                        <div class="lang-row">
+                            <span class="lang-name">Французский</span>
+                            <span class="lang-lvl">B1 — Средний</span>
+                            <div class="lang-bar"><div class="lang-fill" data-w="55%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         РЕКОМЕНДАЦИИ
+         ═══════════════════════════════════════════ -->
+    <section class="section section-cream" id="references">
+        <div class="container">
+            <div class="section-head anim-scroll">
+                <span class="label-top">Рекомендации</span>
+                <h2 class="heading-xl">Люди, которые<br>могут рассказать обо мне</h2>
+            </div>
+            <div class="ref-grid">
+                <div class="ref-card anim-scroll">
+                    <div class="ref-name">Павел Афанасьевич Негоица</div>
+                    <div class="ref-role">Генеральный директор</div>
+                    <div class="ref-org">ФГБУ «Редакция „Российской газеты"»</div>
+                </div>
+                <div class="ref-card anim-scroll">
+                    <div class="ref-name">Алла Михайловна Бережная</div>
+                    <div class="ref-role">Начальник пресс-службы</div>
+                    <div class="ref-org">Русский музей</div>
+                </div>
+                <div class="ref-card anim-scroll">
+                    <div class="ref-name">Светлана Комарова</div>
+                    <div class="ref-role">Руководитель отдела культуры</div>
+                    <div class="ref-org">NEWS.ru</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         КОНТАКТЫ
+         ═══════════════════════════════════════════ -->
+    <section class="section section-contact" id="contact">
+        <div class="container">
+            <div class="cta-block anim-scroll">
+                <div class="cta-photo">
+                    <img src="фото.jpg" alt="Елизавета Махонина" loading="lazy">
+                </div>
+                <div class="cta-body">
+                    <span class="label-top">Контакты</span>
+                    <h2 class="heading-xl">Давайте<br>поговорим</h2>
+                    <p class="text-body">Ищу позицию руководителя PR-отдела, главы пресс-службы, директора по&nbsp;коммуникациям. Открыта к&nbsp;интересным предложениям.</p>
+                    <div class="cta-links">
+                        <a href="mailto:curilova.elizaveta@yandex.ru" class="cta-link magnetic" id="contact-email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            curilova.elizaveta@yandex.ru
+                        </a>
+                        <a href="https://t.me/lil_pierrot" class="cta-link magnetic" id="contact-telegram" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            @lil_pierrot
+                        </a>
+                        <a href="tel:+79104275445" class="cta-link magnetic" id="contact-phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            +7 (910) 427-54-45
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>Елизавета Махонина</span>
+            <span class="footer-sep">·</span>
+            <span>PR-руководитель · Стратегические коммуникации</span>
+            <span class="footer-sep">·</span>
+            <span>Москва</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
