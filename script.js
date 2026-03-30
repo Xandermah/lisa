@@ -79,42 +79,41 @@ function initNavigation() {
     const nav = document.getElementById('nav');
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    const navBackdrop = document.getElementById('navBackdrop');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
 
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
 
-    if (navToggle && navLinks && navBackdrop) {
-        const closeMenu = () => {
-            navToggle.classList.remove('active');
-            navLinks.classList.remove('open');
-            navBackdrop.classList.remove('open');
-            document.body.style.overflow = '';
-        };
+    const closeMobileMenu = () => {
+        if (navToggle) navToggle.classList.remove('active');
+        if (mobileMenu) mobileMenu.classList.remove('open');
+        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('open');
+        document.body.style.overflow = '';
+    };
 
-        const openMenu = () => {
-            navToggle.classList.add('active');
-            navLinks.classList.add('open');
-            navBackdrop.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        };
+    const openMobileMenu = () => {
+        if (navToggle) navToggle.classList.add('active');
+        if (mobileMenu) mobileMenu.classList.add('open');
+        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
 
+    if (navToggle && mobileMenu && mobileMenuBackdrop) {
         navToggle.addEventListener('click', () => {
-            const isOpen = navLinks.classList.contains('open');
+            const isOpen = mobileMenu.classList.contains('open');
             if (isOpen) {
-                closeMenu();
+                closeMobileMenu();
             } else {
-                openMenu();
+                openMobileMenu();
             }
         });
 
-        navBackdrop.addEventListener('click', closeMenu);
+        mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
 
-        navLinks.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                closeMenu();
-            });
+        mobileMenu.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
         });
     }
 
