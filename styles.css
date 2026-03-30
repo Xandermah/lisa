@@ -254,7 +254,10 @@ ul { list-style: none; }
     display: block; width: 24px; height: 2px;
     background: var(--ink); transition: .3s var(--ease);
 }
-
+.mobile-menu,
+.mobile-menu-backdrop {
+    display: none;
+}
 /* ══════════════════════════════════════
    HERO
    ══════════════════════════════════════ */
@@ -1030,6 +1033,10 @@ ul { list-style: none; }
     .cursor-dot, .cursor-ring { display: none; }
     html, body, a, button { cursor: auto; }
 
+    .nav-links {
+        display: none;
+    }
+
     .nav-toggle {
         display: flex;
         position: relative;
@@ -1048,7 +1055,7 @@ ul { list-style: none; }
         transform: translateY(-7px) rotate(-45deg);
     }
 
-    .nav-backdrop {
+    .mobile-menu-backdrop {
         display: none;
         position: fixed;
         inset: 0;
@@ -1058,11 +1065,11 @@ ul { list-style: none; }
         z-index: 1001;
     }
 
-    .nav-backdrop.open {
+    .mobile-menu-backdrop.open {
         display: block;
     }
 
-    .nav-links {
+    .mobile-menu {
         display: none;
         position: fixed;
         top: calc(var(--nav-h) + var(--s4));
@@ -1075,32 +1082,33 @@ ul { list-style: none; }
         border: 1px solid rgba(212, 201, 184, 0.75);
         border-radius: var(--r-xl);
         box-shadow: var(--shadow-xl);
+        overflow-y: auto;
+        z-index: 1002;
+
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: var(--s6);
-        overflow-y: auto;
-        z-index: 1002;
     }
 
-    .nav-links.open {
+    .mobile-menu.open {
         display: flex;
     }
 
-    .nav-links .nav-link {
+    .mobile-menu-link {
         font-size: 1.2rem;
         font-weight: 500;
+        color: var(--warm-gray);
+        text-transform: uppercase;
+        letter-spacing: .06em;
         padding: var(--s3) var(--s5);
-        position: relative;
-        z-index: 1;
     }
 
-    .nav-links .nav-link::after {
-        display: none;
-    }
-
-    .nav-links .nav-link-cta {
-        margin-top: var(--s2);
+    .mobile-menu-link-cta {
+        background: var(--ink);
+        color: var(--white);
+        border-radius: 100px;
+        padding: var(--s3) var(--s5);
     }
 
     .comp-grid { grid-template-columns: 1fr; }
