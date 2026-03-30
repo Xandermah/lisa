@@ -78,25 +78,36 @@ function initScrollAnimations() {
 function initNavigation() {
     const nav = document.getElementById('nav');
     const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
 
     window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 40);
+        if (nav) {
+            nav.classList.toggle('scrolled', window.scrollY > 40);
+        }
     }, { passive: true });
 
     const closeMobileMenu = () => {
         if (navToggle) navToggle.classList.remove('active');
-        if (mobileMenu) mobileMenu.classList.remove('open');
-        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('open');
+        if (mobileMenu) {
+            mobileMenu.classList.remove('open');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+        }
+        if (mobileMenuBackdrop) {
+            mobileMenuBackdrop.classList.remove('open');
+        }
         document.body.style.overflow = '';
     };
 
     const openMobileMenu = () => {
         if (navToggle) navToggle.classList.add('active');
-        if (mobileMenu) mobileMenu.classList.add('open');
-        if (mobileMenuBackdrop) mobileMenuBackdrop.classList.add('open');
+        if (mobileMenu) {
+            mobileMenu.classList.add('open');
+            mobileMenu.setAttribute('aria-hidden', 'false');
+        }
+        if (mobileMenuBackdrop) {
+            mobileMenuBackdrop.classList.add('open');
+        }
         document.body.style.overflow = 'hidden';
     };
 
@@ -114,6 +125,12 @@ function initNavigation() {
 
         mobileMenu.querySelectorAll('.mobile-menu-link').forEach(link => {
             link.addEventListener('click', closeMobileMenu);
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
         });
     }
 
