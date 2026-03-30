@@ -1033,17 +1033,16 @@ ul { list-style: none; }
  .nav-links {
     display: none;
     position: fixed;
-    top: var(--nav-h);
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: var(--s5);
+    padding: calc(var(--nav-h) + var(--s5)) var(--s5) var(--s5);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: var(--s6);
-    z-index: 999;
-    border-top: 1px solid var(--sand);
+    z-index: 1001;
     overflow-y: auto;
 }
 
