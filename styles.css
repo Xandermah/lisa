@@ -1030,83 +1030,10 @@ ul { list-style: none; }
     .cursor-dot, .cursor-ring { display: none; }
     html, body, a, button { cursor: auto; }
 
-    .nav-links {
-        display: flex;
-        visibility: hidden;
-        pointer-events: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: calc(var(--nav-h) + var(--s5)) var(--s5) var(--s5);
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: var(--s6);
-        z-index: 1001;
-        overflow-y: auto;
-    }
-
-    .nav-links.open {
-        visibility: visible;
-        pointer-events: auto;
-    }
-
-    .nav-links::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(28, 25, 23, 0.32);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        opacity: 0;
-        transition: opacity .3s var(--ease);
-        pointer-events: none;
-    }
-
-    .nav-links.open::before {
-        opacity: 1;
-    }
-
-    .nav-links::after {
-        content: '';
-        position: absolute;
-        top: calc(var(--nav-h) + var(--s5));
-        left: 50%;
-        transform: translateX(-50%) translateY(8px);
-        width: min(92vw, 420px);
-        height: calc(100% - var(--nav-h) - var(--s5) * 2);
-        background: rgba(248, 245, 240, 0.97);
-        border: 1px solid rgba(212, 201, 184, 0.7);
-        border-radius: var(--r-xl);
-        box-shadow: var(--shadow-lg);
-        opacity: 0;
-        transition: opacity .3s var(--ease), transform .3s var(--ease);
-        pointer-events: none;
-    }
-
-    .nav-links.open::after {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-
-    .nav-links .nav-link {
-        position: relative;
-        z-index: 1002;
-        font-size: 1.2rem;
-        font-weight: 500;
-        padding: var(--s3) var(--s5);
-    }
-
-    .nav-links .nav-link-cta {
-        margin-top: var(--s2);
-    }
-
     .nav-toggle {
         display: flex;
         position: relative;
-        z-index: 1002;
+        z-index: 1003;
     }
 
     .nav-toggle.active span:nth-child(1) {
@@ -1121,13 +1048,67 @@ ul { list-style: none; }
         transform: translateY(-7px) rotate(-45deg);
     }
 
+    .nav-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(28, 25, 23, 0.34);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 1001;
+    }
+
+    .nav-backdrop.open {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: calc(var(--nav-h) + var(--s4));
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(92vw, 420px);
+        max-height: calc(100vh - var(--nav-h) - var(--s8));
+        padding: var(--s6) var(--s5);
+        background: rgba(248, 245, 240, 0.98);
+        border: 1px solid rgba(212, 201, 184, 0.75);
+        border-radius: var(--r-xl);
+        box-shadow: var(--shadow-xl);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--s6);
+        overflow-y: auto;
+        z-index: 1002;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links .nav-link {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: var(--s3) var(--s5);
+        position: relative;
+        z-index: 1;
+    }
+
+    .nav-links .nav-link::after {
+        display: none;
+    }
+
+    .nav-links .nav-link-cta {
+        margin-top: var(--s2);
+    }
+
     .comp-grid { grid-template-columns: 1fr; }
     .cases-mosaic { grid-template-columns: 1fr; }
     .exp-card { grid-template-columns: 1fr; gap: var(--s3); }
     .hero-scroll { display: none; }
     .case-stats-inline { flex-direction: column; gap: var(--s4); }
 }
-
 @media (max-width: 480px) {
     .container { padding: 0 var(--s4); }
     .hero { padding: calc(var(--nav-h) + var(--s5)) var(--s4) var(--s5); }
