@@ -1040,7 +1040,7 @@ ul { list-style: none; }
     .nav-toggle {
         display: flex;
         position: relative;
-        z-index: 1003;
+        z-index: 1004;
     }
 
     .nav-toggle.active span:nth-child(1) {
@@ -1058,8 +1058,11 @@ ul { list-style: none; }
     .mobile-menu-backdrop {
         display: none;
         position: fixed;
-        inset: 0;
-        background: rgba(28, 25, 23, 0.34);
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(28, 25, 23, 0.30);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
         z-index: 1001;
@@ -1076,7 +1079,7 @@ ul { list-style: none; }
         left: 50%;
         transform: translateX(-50%);
         width: min(92vw, 420px);
-        max-height: calc(100vh - var(--nav-h) - var(--s8));
+        max-height: calc(100vh - var(--nav-h) - var(--s7));
         padding: var(--s6) var(--s5);
         background: rgba(248, 245, 240, 0.98);
         border: 1px solid rgba(212, 201, 184, 0.75);
@@ -1085,6 +1088,7 @@ ul { list-style: none; }
         overflow-y: auto;
         z-index: 1002;
 
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -1096,19 +1100,27 @@ ul { list-style: none; }
     }
 
     .mobile-menu-link {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
         font-weight: 500;
-        color: var(--warm-gray);
+        letter-spacing: .08em;
         text-transform: uppercase;
-        letter-spacing: .06em;
+        color: var(--warm-gray);
         padding: var(--s3) var(--s5);
+        transition: color .3s var(--ease), transform .3s var(--ease);
+    }
+
+    .mobile-menu-link:hover,
+    .mobile-menu-link:active {
+        color: var(--ink);
+        transform: translateY(-1px);
     }
 
     .mobile-menu-link-cta {
         background: var(--ink);
-        color: var(--white);
+        color: var(--white) !important;
         border-radius: 100px;
-        padding: var(--s3) var(--s5);
+        padding: 12px 28px;
+        margin-top: var(--s2);
     }
 
     .comp-grid { grid-template-columns: 1fr; }
