@@ -100,19 +100,6 @@ function initNavigation() {
         });
     }
 
-    const sections = document.querySelectorAll('section[id]');
-    const navLinkEls = document.querySelectorAll('.nav-links .nav-link');
-    const activeObs = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                navLinkEls.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
-            }
-        });
-    }, { rootMargin: '-40% 0px -60% 0px' });
-    sections.forEach(s => activeObs.observe(s));
-}
-
     // Активная ссылка
     const sections = document.querySelectorAll('section[id]');
     const navLinkEls = document.querySelectorAll('.nav-links .nav-link');

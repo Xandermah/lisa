@@ -1030,30 +1030,45 @@ ul { list-style: none; }
     .cursor-dot, .cursor-ring { display: none; }
     html, body, a, button { cursor: auto; }
     
-   .nav-backdrop {
-    display: none;
-    position: fixed;
-    top: var(--nav-h);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(28, 25, 23, 0.42);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 998;
+    .nav-links {
+        display: none;
+        position: fixed; top: var(--nav-h);
+        left: 0; right: 0; bottom: 0;
+        background: var(--cream);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: var(--s6);
+        z-index: 999;
+        border-top: 1px solid var(--sand);
+    }
+    .nav-links.open { display: flex; }
+    .nav-link {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: var(--s3) var(--s5);
+    }
+    .nav-toggle { display: flex; }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .comp-grid { grid-template-columns: 1fr; }
+    .cases-mosaic { grid-template-columns: 1fr; }
+    .exp-card { grid-template-columns: 1fr; gap: var(--s3); }
+    .hero-scroll { display: none; }
+    .case-stats-inline { flex-direction: column; gap: var(--s4); }
 }
 
-.nav-links {
-    display: none;
-    position: fixed; top: var(--nav-h);
-    left: 0; right: 0; bottom: 0;
-    background: var(--cream);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: var(--s6);
-    z-index: 999;
-    border-top: 1px solid var(--sand);
+@media (max-width: 480px) {
+    .container { padding: 0 var(--s4); }
+    .hero { padding: calc(var(--nav-h) + var(--s5)) var(--s4) var(--s5); }
+    .hero-photo-frame { width: 240px; height: 320px; }
+    .hero-photo-ring { width: 270px; height: 350px; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .btn { width: 100%; justify-content: center; }
+    .stats-ribbon { grid-template-columns: 1fr 1fr; }
+    .stat-val { font-size: 1.8rem; }
+    .stat-plus { font-size: 1.8rem; }
 }
-.nav-links.open { display: flex; }
