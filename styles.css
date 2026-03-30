@@ -1122,7 +1122,19 @@ ul { list-style: none; }
         padding: 12px 28px;
         margin-top: var(--s2);
     }
+.case-tile-wide .case-tile-img {
+    height: auto;
+    min-height: 0;
+}
 
+.case-tile-wide .case-tile-img img {
+    height: auto;
+    object-fit: contain;
+}
+
+.case-tile-wide .case-tile-img.case-tile-img-tinted::after {
+    inset: 0;
+}
     .comp-grid { grid-template-columns: 1fr; }
     .cases-mosaic { grid-template-columns: 1fr; }
     .exp-card { grid-template-columns: 1fr; gap: var(--s3); }
