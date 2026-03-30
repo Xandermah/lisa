@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavigation();
     initSmoothScroll();
     initLanguageBars();
-    initParticles();
+    //initParticles();
     initCounters();
     initMagneticButtons();
     initTiltCards();
